@@ -75,7 +75,7 @@ def make_app(**kwargs):
         URLS,
         ui_modules=ui_modules,
         ui_methods=ui_methods,
-        login_url="/login/",
+        login_url=("%slogin/" % options.url_prefix),
         static_path=os.path.join(POWA_ROOT, "static"),
         cookie_secret=options.cookie_secret,
         template_path=os.path.join(POWA_ROOT, "templates"),
