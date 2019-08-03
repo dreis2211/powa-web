@@ -68,7 +68,7 @@ def parse_options():
 
     if options['url_prefix'] == '':
         options['url_prefix'] = "/"
-    else:
+    elif options['url_prefix'] != '/':
         options['url_prefix'] = "/" + options['url_prefix'].strip("/") + "/"
     define("index_url", type=str, default="%sserver/" % options['url_prefix'])
 
