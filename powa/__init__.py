@@ -45,7 +45,7 @@ def make_app(**kwargs):
 
     URLS = [
         U(r"%slogin/" % options.url_prefix, LoginHandler, name="login"),
-        U(r"%slogout/ % options.url_prefix", LogoutHandler, name="logout"),
+        U(r"%slogout/" % options.url_prefix, LogoutHandler, name="logout"),
         U(r"%sreload_collector/" % options.url_prefix, CollectorReloadHandler,
           name="reload_collector"),
         U(r"%sserver/select" % options.url_prefix, ServerSelector,
